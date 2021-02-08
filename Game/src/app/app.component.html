@@ -1,0 +1,39 @@
+  <h1>Create new game</h1>
+      <label>Id:</label>
+      <input id="Id" name="Id" type="text" [(ngModel)]="id" minlength="1" maxlength="10000">
+      <label>Last Name:</label>
+      <input id="Name" name="Name" type="text" [(ngModel)]="name" minlength="1" maxlength="50">
+      <label>Gender:</label>
+      <input id="Price" name="Price" type="text" [(ngModel)]="price" minlength="1" maxlength="10000">
+      <label>Name:</label>
+      <input id="Developer" name="Developer" type="text" [(ngModel)]="developer" minlength="1" maxlength="50">
+      <label>Name:</label>
+      <input id="Publisher" name="Publisher" type="text" [(ngModel)]="publisher" minlength="1" maxlength="50">
+      <label>Name:</label>
+      <input id="Rating" name="Rating" type="text" [(ngModel)]="rating" minlength="1" maxlength="100">
+      <label>Name:</label>
+      <input id="AgeRestriction" name="AgeRestriction" type="text" [(ngModel)]="ageRestriction" minlength="1" maxlength="100">
+      <button (click)="addGame()">Add</button>
+  <table>
+    <thead>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Price</td>
+    <td>Developer</td>
+    <td>Publisher</td>
+    <td>Rating</td>
+    <td>Age restriction</td>
+    </thead>
+    <tr *ngFor="let game of games" class="game">
+      <td>{{game.id}}</td>
+      <td>{{game.name}}</td>
+      <td>{{game.price}}</td>
+      <td>{{game.developer}}</td>
+      <td>{{game.publisher}}</td>
+      <td>{{game.rating}}</td>
+      <td>{{game.ageRestriction}}</td>
+      <td><button (click)="checkGame(game.id)">Detail</button></td>
+    </tr>
+  </table>
+
+<router-outlet></router-outlet>

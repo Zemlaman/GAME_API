@@ -36,7 +36,10 @@ public class GameResource {
     @PUT
     @Path("{id}")
     public Response editGame(@PathParam("id") int id, Game game) {
-        return Response.ok("Game removed").build();
+        if(!manager.create(game))
+            return Response.status(400).build();
+
+        return Response.ok(game).build();
     }
 
     @DELETE

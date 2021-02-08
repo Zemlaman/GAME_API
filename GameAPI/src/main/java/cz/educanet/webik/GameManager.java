@@ -22,7 +22,7 @@ public class GameManager {
 
         if (gameCheck(newId)){
             game.setId(newId);
-            games.add(game);
+
         }
         return true;
     }
@@ -47,7 +47,14 @@ public class GameManager {
     }
 
     public boolean editGame(int id){
-        return true;
+
+
+        if(gameCheck(id)){
+            games.add(game);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
