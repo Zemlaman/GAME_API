@@ -1,19 +1,12 @@
 
 <h1>Create new game</h1>
-<label>Id:</label>
-<input id="Id" name="Id" type="text" [(ngModel)]="id" minlength="1" maxlength="10000">
-<label>Last Name:</label>
-<input id="Name" name="Name" type="text" [(ngModel)]="name" minlength="1" maxlength="50">
-<label>Gender:</label>
-<input id="Price" name="Price" type="text" [(ngModel)]="price" minlength="1" maxlength="10000">
-<label>Name:</label>
-<input id="Developer" name="Developer" type="text" [(ngModel)]="developer" minlength="1" maxlength="50">
-<label>Name:</label>
-<input id="Publisher" name="Publisher" type="text" [(ngModel)]="publisher" minlength="1" maxlength="50">
-<label>Name:</label>
-<input id="Rating" name="Rating" type="text" [(ngModel)]="rating" minlength="1" maxlength="100">
-<label>Name:</label>
-<input id="AgeRestriction" name="AgeRestriction" type="text" [(ngModel)]="ageRestriction" minlength="1" maxlength="100">
+<input id="Id" name="Id" type="text" [(ngModel)]="id" minlength="1" maxlength="10000" placeholder="id">
+<input id="Name" name="Name" type="text" [(ngModel)]="name" minlength="1" maxlength="50" placeholder="Name">
+<input id="Price" name="Price" type="text" [(ngModel)]="price" minlength="1" maxlength="10000" placeholder="Price">
+<input id="Developer" name="Developer" type="text" [(ngModel)]="developer" minlength="1" maxlength="50" placeholder="Developer">
+<input id="Publisher" name="Publisher" type="text" [(ngModel)]="publisher" minlength="1" maxlength="50" placeholder="Publisher">
+<input id="Rating" name="Rating" type="text" [(ngModel)]="rating" minlength="1" maxlength="100" placeholder="Rating">
+<input id="AgeRestriction" name="AgeRestriction" type="text" [(ngModel)]="ageRestriction" minlength="1" maxlength="100" placeholder="AgeRestriction">
 <button (click)="addGame()">Add</button>
 <table>
   <thead>

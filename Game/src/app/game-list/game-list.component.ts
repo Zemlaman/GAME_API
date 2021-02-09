@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Game} from './game';
+import {Game} from '../Models/game';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './game-list.component.html',
+  styleUrls: ['./game-list.component.scss']
 })
 export class GameListComponent implements OnInit {
   title = 'Game';

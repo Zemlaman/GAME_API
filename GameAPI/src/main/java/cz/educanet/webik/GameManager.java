@@ -21,7 +21,7 @@ public class GameManager {
 
         if (gameCheck(newId)){
             game.setId(newId);
-
+            games.add(game);
         }
         return true;
     }
@@ -34,8 +34,8 @@ public class GameManager {
     }
 
     public boolean gameCheck(int id) {
-        for (int i = 0; i < 100; i++){
-            if (id != games.get(id).id) {
+        for (int i = 0; i < games.size(); i++){
+            if (id != games.get(i).id) {
                 return false;
             }
         } return true;
