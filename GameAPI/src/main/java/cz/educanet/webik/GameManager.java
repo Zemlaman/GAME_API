@@ -1,7 +1,6 @@
 package cz.educanet.webik;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.lang.Math;
 
@@ -46,7 +45,7 @@ public class GameManager {
         return  games.remove(getGame(id));
     }
 
-    public boolean editGame(int id){
+    public boolean editGame(int id, Game game){
 
 
         if(gameCheck(id)){

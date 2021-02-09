@@ -4,7 +4,6 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Path("games")
@@ -36,10 +35,10 @@ public class GameResource {
     @PUT
     @Path("{id}")
     public Response editGame(@PathParam("id") int id, Game game) {
-        if(!manager.create(game))
-            return Response.status(400).build();
-
-        return Response.ok(game).build();
+        if(!manager.editGame(id, game)) {
+            return Response.ok().build();
+        }
+         else return Response.status(Response.Status.BAD_REQUEST).build();
     }
 
     @DELETE
