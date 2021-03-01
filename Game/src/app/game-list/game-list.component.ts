@@ -50,6 +50,9 @@ export class GameListComponent implements OnInit {
   checkGame(id: number): void {
     this.router.navigateByUrl('detail/' + id);
   }
+  deleteGame(id: number): void {
+    this.router.navigateByUrl("delete" + id);
+  }
 
   ngOnInit(): void {
     this.http.get(this.url).subscribe(

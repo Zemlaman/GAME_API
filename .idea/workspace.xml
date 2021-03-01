@@ -12,6 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="29152c1f-b2bb-4409-a226-6230812728e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/app/game-list/game-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/app/game-list/game-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/app/game-list/game-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/app/game-list/game-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +82,9 @@
       <workItem from="1612802613755" duration="3756000" />
       <workItem from="1612856300628" duration="19000" />
       <workItem from="1612858353917" duration="92000" />
+      <workItem from="1613462555729" duration="1148000" />
+      <workItem from="1614586806784" duration="18000" />
+      <workItem from="1614612010217" duration="1030000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1">
       <created>1612793139662</created>
@@ -128,10 +133,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="(❁´◡`❁)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1180" y="283" key="FileChooserDialogImpl" timestamp="1612856317558">
-      <screen x="-1920" y="8" width="1920" height="1040" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614586823257">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="283" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@-1920.8.1920.1040" timestamp="1612856317558" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1614586823257" />
     <state x="-1368" y="261" key="Vcs.Push.Dialog.v2" timestamp="1612858393291">
       <screen x="-1920" y="8" width="1920" height="1040" />
     </state>
