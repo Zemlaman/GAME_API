@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Path("users")
+@Path("user")
 @Produces(MediaType.APPLICATION_JSON)
 public class UsersResource {
 
@@ -25,7 +25,7 @@ public class UsersResource {
             @FormParam("password") String password
     ) {
         User user = new User(username, password);
-        if(userCheck(user)) {
+        if(user != null) {
             return Response.ok("This username already exists").build();
         }
         names.add(user);
@@ -44,18 +44,6 @@ public class UsersResource {
 
         }
         return Response.status(Response.Status.NOT_FOUND).build();
-    }
-
-
-    public Boolean userCheck(User user) {
-        for (int i = 0; i < names.size(); i++) {
-            if (names.get(i).getUsername().equals(user.getUsername())) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        return false;
     }
 
     @GET

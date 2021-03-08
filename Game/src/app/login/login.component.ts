@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
   }
 
   clickedButton() {
-    // tslint:disable-next-line:triple-equals
     if(this.password === this.password){
       this.router.navigate(['/games']);
     }
