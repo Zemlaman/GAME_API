@@ -12,7 +12,7 @@ export class GameListComponent implements OnInit {
   title = 'Game';
 
   games: Game[] = [];
-  url = 'http://127.0.0.1:8080/GameAPI/api/games';
+  url = '/api/games';
 
   id = '';
   name = '';
@@ -51,7 +51,7 @@ export class GameListComponent implements OnInit {
     this.router.navigateByUrl('detail/' + id);
   }
   deleteGame(id: number): void {
-    this.router.navigateByUrl("delete" + id);
+    this.router.navigateByUrl('delete/' + id);
   }
 
   ngOnInit(): void {
