@@ -1,4 +1,7 @@
-cz\educanet\webik\GameManager.class
 cz\educanet\webik\ApiConfig.class
-cz\educanet\webik\GameResource.class
+cz\educanet\webik\UsersManager.class
 cz\educanet\webik\Game.class
+cz\educanet\webik\UsersResource.class
+cz\educanet\webik\GameManager.class
+cz\educanet\webik\User.class
+cz\educanet\webik\GameResource.class

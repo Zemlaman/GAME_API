@@ -12,7 +12,7 @@ export class GameListComponent implements OnInit {
   title = 'Game';
 
   games: Game[] = [];
-  url = '/api/user';
+  url = '/api/games';
 
   id = '';
   name = '';
