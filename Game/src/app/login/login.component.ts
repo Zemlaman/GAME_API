@@ -18,12 +18,18 @@ export class LoginComponent implements OnInit {
   }
 
   clickedButton() {
-    if(this.password === this.password){
-      this.router.navigate(['/games']);
+    if (this.password === this.password) {
+      this.http.post(this.url, {email: this.email, password: this.password}).subscribe(
+        (data: any) => {
+          this.router.navigate(['/games']);
+        }, (error) => {
+
+        }
+      );
     }
   }
 
-  ngOnInit() {
+    ngOnInit() {
 
   }
 }

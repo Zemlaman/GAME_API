@@ -37,7 +37,7 @@ export class GameListComponent implements OnInit {
       ageRestriction: this.ageRestriction
     };
     this.http.post(this.url, body, {observe: 'response'}).subscribe(
-      (data) => {
+      (data: any) => {
         console.log(data);
         this.ngOnInit();
       },
