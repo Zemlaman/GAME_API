@@ -11,8 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29152c1f-b2bb-4409-a226-6230812728e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI/WEB-INF/classes/cz/educanet/webik/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI/WEB-INF/classes/cz/educanet/webik/UsersManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI/WEB-INF/classes/cz/educanet/webik/UsersResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/app/game-list/game-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/app/game-list/game-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAPI/target/GameAPI.war" beforeDir="false" afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +45,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GameAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Zemla\IdeaProjects\GAME_API\Game\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (Game)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/Game/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -87,6 +101,7 @@
       <workItem from="1614617138847" duration="1065000" />
       <workItem from="1614619095101" duration="8000" />
       <workItem from="1614670709500" duration="689000" />
+      <workItem from="1615494913713" duration="953000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1">
       <created>1612793139662</created>
