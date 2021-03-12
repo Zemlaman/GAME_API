@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {User} from '../Models/user';
+import {Game} from '../Models/game';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  title = 'User';
 
+  users: User[] = [];
   private url = '/api/games';
   email = '';
   password = '';
@@ -16,6 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router){
 
   }
+
+
 
   clickedButton() {
     if (this.password === this.password) {
@@ -30,6 +36,13 @@ export class LoginComponent implements OnInit {
   }
 
     ngOnInit() {
-
+      this.http.get(this.url).subscribe(
+        (data: User[]) => {
+          this.users = data;
+        },
+        (error: HttpErrorResponse) => {
+          console.log(error);
+        }
+      );
   }
 }
