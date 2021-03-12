@@ -11,11 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29152c1f-b2bb-4409-a226-6230812728e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI/WEB-INF/classes/cz/educanet/webik/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI/WEB-INF/classes/cz/educanet/webik/UsersManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI/WEB-INF/classes/cz/educanet/webik/UsersResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameAPI/target/GameAPI.war" beforeDir="false" afterPath="$PROJECT_DIR$/GameAPI/target/GameAPI.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +41,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Zemla\IdeaProjects\GAME_API\Game\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (Game)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/Game/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -102,6 +87,7 @@
       <workItem from="1614619095101" duration="8000" />
       <workItem from="1614670709500" duration="689000" />
       <workItem from="1615494913713" duration="953000" />
+      <workItem from="1615575662320" duration="1259000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1">
       <created>1612793139662</created>
@@ -131,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614613066513</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lepší, ale ne dobrý :(">
+      <created>1615575690706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615575690706</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,18 +148,19 @@
     <MESSAGE value="dokonalost.exe" />
     <MESSAGE value="(❁´◡`❁)" />
     <MESSAGE value="(¬_¬ )" />
-    <option name="LAST_COMMIT_MESSAGE" value="(¬_¬ )" />
+    <MESSAGE value="lepší, ale ne dobrý :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="lepší, ale ne dobrý :(" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614672233148">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1615584614056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="283" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@-1920.8.1920.1040" timestamp="1612856317558" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1614672233148" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1614613069177">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1615584614056" />
+    <state x="-1368" y="261" key="Vcs.Push.Dialog.v2" timestamp="1615575702984">
+      <screen x="-1920" y="8" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.8.1920.1040@-1920.8.1920.1040" timestamp="1612858393291" />
+    <state x="-1368" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.8.1920.1040@-1920.8.1920.1040" timestamp="1615575702984" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1614613069177" />
   </component>
 </project>

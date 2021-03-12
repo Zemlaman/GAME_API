@@ -7,6 +7,8 @@ import java.lang.Math;
 @ApplicationScoped
 public class GameManager {
 
+    int idcko = 0;
+
     private ArrayList<Game> games = new ArrayList<>();
 
     public ArrayList<Game> getGames(){
@@ -17,14 +19,15 @@ public class GameManager {
         if(game.getRating() < 0 || game.getRating() > 100)
             return false;
 
-        int newId = (int) (Math.random()*(100 +1));
+        this.idcko ++;
+        int newId = this.idcko;
 
-        if (gameCheck(newId)){
-            game.setId(newId);
-            games.add(game);
-        }
+        game.setId(newId);
+        games.add(game);
+
         return true;
     }
+
 
     public Game getGame (int id){
         return  games.stream()
