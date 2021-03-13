@@ -21,9 +21,13 @@ export class UsersComponent implements OnInit {
 
   }
   clickedButton() {
-      this.router.navigate(['/login']);
-      this.http.post('/api/user', {password: this.password, username: this.username, }).subscribe(
-        (data: any) => {
+    const body = {
+      username: this.username,
+      password: this.password
+    }
+    this.router.navigate(['/login']);
+    this.http.post('/api/user', body, {observe: 'response'}).subscribe((data) => {
+          console.log(data);
           this.router.navigate(['/login']);
         }, (error) => {
           console.log(error);

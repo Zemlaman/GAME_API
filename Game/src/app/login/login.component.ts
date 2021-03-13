@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   users: User[] = [];
   private url = '/api/user';
-  email = '';
+  username = '';
   password = '';
 
   constructor(private http: HttpClient, private router: Router){
@@ -24,10 +24,16 @@ export class LoginComponent implements OnInit {
 
 
   clickedButton() {
+    const body = {
+      username: this.username,
+      password: this.password
+    }
+    this.router.navigate(['/games']);
     if (this.password !== null) {
-      this.http.get(this.url, {email: this.email, password: this.password}).subscribe(
-        (data: any) => {
-          this.router.navigate(['/games']);
+      // @ts-ignore
+      this.http.get(this.url, body, {observe: 'response'}).subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['/games']);
         }, (error) => {
 
         }
