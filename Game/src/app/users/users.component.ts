@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
   }
   clickedButton() {
       this.router.navigate(['/login']);
-      this.http.post(this.url, {password: this.password, username: this.username, }).subscribe(
+      this.http.post('/api/user', {password: this.password, username: this.username, }).subscribe(
         (data: any) => {
           this.router.navigate(['/login']);
         }, (error) => {
@@ -32,7 +32,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(
+    this.http.get('/api/user').subscribe(
       (data: User[]) => {
         this.users = data;
       },
