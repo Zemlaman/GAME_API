@@ -8,13 +8,15 @@ import { GameListComponent } from './game-list/game-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameListComponent,
     UsersComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
