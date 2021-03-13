@@ -13,7 +13,6 @@ export class GameListComponent implements OnInit {
 
   games: Game[] = [];
   url = 'http://127.0.0.1:8080/GameAPI/api/games';
-  url2 = '/api/games';
 
   name = '';
   price = '';
@@ -36,8 +35,8 @@ export class GameListComponent implements OnInit {
       rating: this.rating,
       ageRestriction: this.ageRestriction
     };
-    this.http.post(this.url, body, {observe: 'response'}).subscribe(
-      (data: any) => {
+    this.http.post('api/games', body, {observe: 'response'}).subscribe(
+      (data) => {
         console.log(data);
         this.ngOnInit();
       },
@@ -54,7 +53,7 @@ export class GameListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get(this.url2).subscribe(
+    this.http.get('api/games').subscribe(
       (data: Game[]) => {
         this.games = data;
       },
