@@ -1,9 +1,10 @@
 package cz.educanet.webik;
 
 import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
 
 @SessionScoped
-public class User {
+public class User implements Serializable {
 
     public String username;
     public String password;
