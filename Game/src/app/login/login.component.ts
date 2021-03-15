@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   title = 'User';
 
   users: User[] = [];
-  private url = '/api/user';
+  private url = 'http://localhost:4200/TotallyMyAppXd/api/user/login';
   username = '';
   password = '';
 
@@ -24,18 +24,13 @@ export class LoginComponent implements OnInit {
 
 
   clickedButton() {
-    const body = {
-      username: this.username,
-      password: this.password
-    }
-    this.router.navigate(['/games']);
-    if (this.password !== null) {
-      // @ts-ignore
-      this.http.get(this.url, body, {observe: 'response'}).subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/games']);
+    if (this.password === this.password) {
+      this.http.post(this.url, {username: this.username, password: this.password},
+        {responseType: 'text'}).subscribe(
+        (data: any) => {
+          this.router.navigate(['/games']);
         }, (error) => {
-
+          console.error(error);
         }
       );
     }

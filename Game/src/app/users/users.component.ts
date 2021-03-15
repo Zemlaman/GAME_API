@@ -12,7 +12,7 @@ import {User} from '../Models/user';
 })
 
 export class UsersComponent implements OnInit {
-  private url = '/api/user';
+  private url = 'http://localhost:4200/TotallyMyAppXd/api/user/register';
   username = '';
   password = '';
   users: User[] = [];
@@ -20,29 +20,18 @@ export class UsersComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router){
 
   }
+
   clickedButton() {
-    const body = {
-      username: this.username,
-      password: this.password
-    }
-    this.router.navigate(['/login']);
-    this.http.post('/api/user', body, {observe: 'response'}).subscribe((data) => {
-          console.log(data);
-          this.router.navigate(['/login']);
-        }, (error) => {
-          console.log(error);
-        }
-      );
+    this.http.post(this.url, {username: this.username, password: this.password}, {responseType: 'text'}).subscribe(
+      (data: any) => {
+        this.router.navigate(['/login']);
+      }, (error) => {
+        console.error(error);
+      }
+    );
   }
 
   ngOnInit() {
-    this.http.get('/api/user').subscribe(
-      (data: User[]) => {
-        this.users = data;
-      },
-      (error: HttpErrorResponse) => {
-        console.log(error);
-      }
-    );
+
   }
 }
