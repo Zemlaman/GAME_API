@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 import {Game} from '../Models/game';
 import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-game-detail',
@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./game-detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  private url = 'api/games/';
+  private url = 'http://127.0.0.1:8080/GameAPI/api/games';
   game: Game;
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
 

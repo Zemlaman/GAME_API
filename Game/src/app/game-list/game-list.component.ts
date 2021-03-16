@@ -49,7 +49,25 @@ export class GameListComponent implements OnInit {
     this.router.navigateByUrl('game/' + id);
   }
   deleteGame(id: number): void {
-    this.games = null;
+    this.http.delete(this.url + id).subscribe(
+      (data) => {
+        console.log(data);
+        this.updateList();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  updateList(): void {
+    this.http.get(this.url).subscribe(
+      (data: Game[]) => {
+        this.games = data;
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error);
+      }
+    );
   }
 
   ngOnInit(): void {
