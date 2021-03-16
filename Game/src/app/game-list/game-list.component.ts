@@ -46,7 +46,7 @@ export class GameListComponent implements OnInit {
     );
   }
   checkGame(id: number): void {
-    this.router.navigateByUrl('detail/' + id);
+    this.router.navigateByUrl('game/' + id);
   }
   deleteGame(id: number): void {
     this.games = null;
