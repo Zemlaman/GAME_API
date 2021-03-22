@@ -13,7 +13,6 @@ export class GameListComponent implements OnInit {
 
   games: Game[] = [];
   url = 'api/games/';
-  url2 = 'http://127.0.0.1:8080/GameAPI/api/games';
   contentVisibility = false;
   name = '';
   price = '';

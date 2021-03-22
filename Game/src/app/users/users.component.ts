@@ -12,7 +12,7 @@ import {User} from '../Models/user';
 })
 
 export class UsersComponent implements OnInit {
-  private url = 'http://localhost:4200/TotallyMyAppXd/api/user/register';
+  private url = 'api/user/';
   username = '';
   password = '';
   users: User[] = [];
@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
   }
 
   clickedButton() {
-    this.http.post(this.url, {username: this.username, password: this.password}, {responseType: 'text'}).subscribe(
+    this.http.post(this.url + 'register', {username: this.username, password: this.password}, {responseType: 'text'}).subscribe(
       (data: any) => {
         this.router.navigate(['/login']);
       }, (error) => {
