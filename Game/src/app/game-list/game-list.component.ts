@@ -12,7 +12,8 @@ export class GameListComponent implements OnInit {
   title = 'Game';
 
   games: Game[] = [];
-  url = 'http://127.0.0.1:8080/GameAPI/api/games';
+  url = 'api/games/';
+  url2 = 'http://127.0.0.1:8080/GameAPI/api/games';
   contentVisibility = false;
   name = '';
   price = '';
@@ -35,10 +36,10 @@ export class GameListComponent implements OnInit {
       rating: this.rating,
       ageRestriction: this.ageRestriction
     };
-    this.http.post('api/games', body, {observe: 'response'}).subscribe(
+    this.http.post(this.url, body, {observe: 'response'}).subscribe(
       (data) => {
         console.log(data);
-        this.ngOnInit();
+        this.updateList();
       },
       (error: HttpErrorResponse) => {
         console.log(error);
@@ -49,6 +50,7 @@ export class GameListComponent implements OnInit {
     this.router.navigateByUrl('game/' + id);
   }
   deleteGame(id: number): void {
+    window.location.reload();
     this.http.delete(this.url + id).subscribe(
       (data) => {
         console.log(data);
@@ -71,14 +73,7 @@ export class GameListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('api/games').subscribe(
-      (data: Game[]) => {
-        this.games = data;
-      },
-      (error: HttpErrorResponse) => {
-        console.log(error);
-      }
-    );
+    this.updateList();
   }
 
 }

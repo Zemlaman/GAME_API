@@ -9,7 +9,7 @@ public class GameManager {
 
     int idcko = 0;
 
-    public ArrayList<Game> games = new ArrayList<>();
+    private ArrayList<Game> games = new ArrayList<>();
 
     public ArrayList<Game> getGames(){
         return games;

@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   title = 'User';
 
   users: User[] = [];
-  private url = 'http://localhost:4200/TotallyMyAppXd/api/user/login';
+  private url = 'http://127.0.0.1:8080/GameAPI/api/games';
   username = '';
   password = '';
 

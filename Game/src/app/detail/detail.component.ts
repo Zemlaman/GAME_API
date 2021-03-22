@@ -5,11 +5,11 @@ import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-game-detail',
-  templateUrl: './game-detail.component.html',
-  styleUrls: ['./game-detail.component.scss']
+  templateUrl: './detail.component.html',
+  styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  private url = 'http://127.0.0.1:8080/GameAPI/api/games';
+  private url = 'api/games/';
   game: Game;
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
 

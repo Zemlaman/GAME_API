@@ -6,8 +6,8 @@ import java.io.Serializable;
 @SessionScoped
 public class User implements Serializable {
 
-    public String username;
-    public String password;
+    private String username;
+    private String password;
     public User(){}
 
     public User(String username, String password) {

@@ -29,7 +29,7 @@ public class UsersResource {
     @POST
     @Path("register")
     public Response createUser(User user) {
-        if(existUser(user.username)) {
+        if(existUser(user.getUsername())) {
             return Response.ok("This username already exists").build();
         }
         names.add(user);
@@ -41,7 +41,7 @@ public class UsersResource {
     public Response loginUser(User user) {
         for(int x = 0; x < names.size(); x++) {
             User user2 = names.get(x);
-            if (user2.username.equals(user.username) & user2.password.equals(user.password)) {
+            if (user2.getUsername().equals(user.getUsername()) & user2.getPassword().equals(user.getPassword())) {
                 manager.user = user2;
                 return Response.ok(user2).build();
             }
