@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-game-detail',
+  selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
@@ -13,6 +13,16 @@ export class DetailComponent implements OnInit {
   private url = 'api/games/';
   game: Game;
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
+
+  edit() {
+    this.http.put(this.url + this.game.id, this.game).subscribe(
+      (data: Game) => {
+        this.game = data;
+      }, (error) => {
+        console.log(error);
+      }
+    );
+  }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(p => {
