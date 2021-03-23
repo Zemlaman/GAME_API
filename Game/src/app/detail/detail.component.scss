@@ -2,6 +2,11 @@ body {
   margin: 0;
   padding: 0;
   background: #000;
+  font-family: "Comic Sans MS";
+}
+
+html{
+  font-family: "Comic Sans MS";
 }
 
 section{
@@ -30,4 +35,26 @@ section{
   100%{
     background-position: 0 50%;
   }
+}
+
+.footer {
+  color: white;
+  font-family: "Comic Sans MS";
+  text-align: center;
+  font-size: 130px;
+  margin-bottom: 1000px;
+  animation: rotateY 5s infinite linear;
+  background: url("../img/po.png") bottom center no-repeat;
+  height: 950px;
+}
+@keyframes rotateY {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+div {
+  cursor:crosshair
 }

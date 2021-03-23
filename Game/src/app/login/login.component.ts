@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
         (data: any) => {
           this.router.navigate(['/games']);
         }, (error) => {
+          alert('Si asi zapoměl heslo frájo ☠');
           console.error(error);
         }
       );

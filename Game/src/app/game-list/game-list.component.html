@@ -8,7 +8,7 @@
 <input id="Rating" name="Rating" type="text" [(ngModel)]="rating" minlength="1" maxlength="100" placeholder="Rating">
 <input id="AgeRestriction" name="AgeRestriction" type="text" [(ngModel)]="ageRestriction" minlength="1" maxlength="100" placeholder="AgeRestriction">
 <button (click)="addGame()">Add</button>
-<table>
+<table class="table table-light">
   <thead>
   <td>Id</td>
   <td>Name</td>
@@ -31,4 +31,5 @@
   </tr>
 </table>
   </div>
+  <div class="footer"></div>
 </section>

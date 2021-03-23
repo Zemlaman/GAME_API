@@ -19,6 +19,9 @@ section{
   position: relative;
   animation: change 3s ease-in-out infinite;
 }
+html{
+  font-family: "Comic Sans MS";
+}
 
 @keyframes change {
   0%{
@@ -33,4 +36,25 @@ section{
 }
 .jumbotron-fluid{
   background: transparent;
+}
+.footer {
+  color: white;
+  font-family: "Comic Sans MS";
+  text-align: center;
+  font-size: 130px;
+  margin-bottom: 1000px;
+  animation: rotateY 5s infinite linear;
+  background: url("../img/linuxtucnak.png") bottom center no-repeat;
+  height: 950px;
+}
+@keyframes rotateY {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+div {
+  cursor:crosshair
 }

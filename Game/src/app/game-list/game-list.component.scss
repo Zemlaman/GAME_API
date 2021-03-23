@@ -4,6 +4,10 @@ body {
   background: #000;
 }
 
+html{
+  font-family: "Comic Sans MS";
+}
+
 section{
   min-width: 1024px;
   min-height: 100%;
@@ -19,7 +23,24 @@ section{
   position: relative;
   animation: change 3s ease-in-out infinite;
 }
-
+.footer {
+  color: white;
+  font-family: "Comic Sans MS";
+  text-align: center;
+  font-size: 130px;
+  margin-bottom: 1000px;
+  animation: rotateY 5s infinite linear;
+  background: url("../img/bruh.png") bottom center no-repeat;
+  height: 950px;
+}
+@keyframes rotateY {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 table{
   height: 1000%;
 }
@@ -38,4 +59,7 @@ table{
   100%{
     background-position: 0 50%;
   }
+}
+div {
+  cursor:crosshair
 }
