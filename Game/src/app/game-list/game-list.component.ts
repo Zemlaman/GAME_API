@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Game} from '../Models/game';
+import {User} from '../Models/user';
 import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -20,6 +22,7 @@ export class GameListComponent implements OnInit {
   publisher = '';
   rating = '';
   ageRestriction = '';
+  users: User[] = [];
 
   constructor(private http: HttpClient, private router: Router) {
     this.ngOnInit();
@@ -64,6 +67,17 @@ export class GameListComponent implements OnInit {
     this.http.get(this.url).subscribe(
       (data: Game[]) => {
         this.games = data;
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error);
+      }
+    );
+    this.http.get(this.url).subscribe(
+      (data: User[]) => {
+        this.users = data;
+        if (data == null){
+          this.router.navigateByUrl('login/');
+        }
       },
       (error: HttpErrorResponse) => {
         console.log(error);

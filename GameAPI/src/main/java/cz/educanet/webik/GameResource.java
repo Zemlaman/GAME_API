@@ -38,7 +38,7 @@ public class GameResource {
         if(!manager.editGame(id, game)) {
             return Response.ok().build();
         }
-         else return Response.status(Response.Status.BAD_REQUEST).build();
+        else return Response.status(Response.Status.BAD_REQUEST).build();
     }
 
     @DELETE

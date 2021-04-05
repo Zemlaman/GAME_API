@@ -32,6 +32,8 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.username == null){
 
+    }
   }
 }
